@@ -26,7 +26,7 @@ func (engine *Engine) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 }
 
 // Run ...
-func Run(engine *Engine) (err error) {
+func (engine *Engine) Run() (err error) {
 	err = http.ListenAndServe(":8080", engine)
 	return
 }
